@@ -14,5 +14,6 @@ router.get('/userProfile',jwtHelper.verifyJwtToken, ctrlUser.userProfile);
 
 //For getting and posting device values
 router.post('/device',ctrlDevice.send_data);
+router.get('/device/:deviceId',ctrlDevice.get_data);
 
 module.exports = router;
